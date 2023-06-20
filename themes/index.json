@@ -1,0 +1,37 @@
+[
+  {
+    "author": "Shad",
+    "authorUsername": "shadcn",
+    "version": "1",
+    "name": "Default",
+    "description": "The default shadcn/ui theme."
+  },
+  {
+    "author": "Luis Filipe",
+    "authorUsername": "luisFilipePT",
+    "version": "1",
+    "name": "Nord",
+    "description": "An arctic, north-bluish color palette."
+  },
+  {
+    "author": "Luis Filipe",
+    "authorUsername": "luisFilipePT",
+    "version": "1",
+    "name": "Gold",
+    "description": "A warm and inviting color palette of rich browns and shimmering golds."
+  },
+  {
+    "author": "Luis Filipe",
+    "authorUsername": "luisFilipePT",
+    "version": "1",
+    "name": "Nature",
+    "description": "Inspired by the colors of nature, this theme features a soothing palette of soft yellows, greens, and blues."
+  },
+  {
+    "author": "Luis Filipe",
+    "authorUsername": "luisFilipePT",
+    "version": "1",
+    "name": "Netflix",
+    "description": "Inspired by the iconic streaming platform, this theme features a bold color palette of black, white, and fiery red."
+  }
+]
