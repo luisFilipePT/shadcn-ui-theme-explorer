@@ -1,7 +1,9 @@
 {
-  "name": "next-template",
+  "name": "theme-explorer-shadcn-ui",
   "version": "0.0.2",
-  "private": true,
+  "private": false,
+  "author": "Luis Oliveira",
+  "description": "A theme explorer for shadcn UI",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
