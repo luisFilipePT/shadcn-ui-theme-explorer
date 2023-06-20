@@ -11,12 +11,10 @@ export function ThemeArrows({ children }: { children: ReactNode}) {
   return (
     <div className={'relative'}>
       <div className={'md:block'}>
-        <ChevronLeft className={'text-primary absolute left-0 top-52 w-10 h-10 md:w-20 md:h-20'} onClick={previousTheme} />
-        <ChevronRight className={'text-primary absolute right-0 top-52 w-10 h-10 md:w-20 md:h-20'} onClick={nextTheme} />
+        <ChevronLeft className={'text-primary absolute left-0 top-16 md:top-52 w-10 h-10 md:w-20 md:h-20'} onClick={previousTheme} />
+        <ChevronRight className={'text-primary absolute right-0 top-16 md:top-52 w-10 h-10 md:w-20 md:h-20'} onClick={nextTheme} />
       </div>
-      <div className={'container'}>
-        {children}
-      </div>
+      {children}
     </div>
   )
 }

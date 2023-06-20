@@ -23,7 +23,7 @@ export default function IndexPage() {
 
   return (
     <ThemeArrows>
-        <section className="container grid items-center gap-6 pb-8 pt-6 md:py-10 min-w-full">
+        <section className="container grid items-center gap-6 pb-8 pt-6 md:py-5">
           <div className="flex max-w-[980px] flex-col items-start gap-2">
             <h1 className="text-3xl font-extrabold leading-tight tracking-tighter md:text-4xl">
               {currentTheme.name} <br className="hidden sm:inline" />
