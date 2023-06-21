@@ -1,9 +1,8 @@
 export type SiteConfig = typeof siteConfig
 
 export const siteConfig = {
-  name: "Theme Explorer shadcn/ui ",
-  description:
-    "Beautifully designed components built with Radix UI and Tailwind CSS.",
+  name: "shadcn/ui Theme Explorer",
+  description: "Beautifully designed themes built for shadcn/ui",
   mainNav: [
     {
       title: "Home",
@@ -11,8 +10,8 @@ export const siteConfig = {
     },
   ],
   links: {
-    twitter: "https://twitter.com/shadcn",
-    github: "https://github.com/shadcn/ui",
+    twitter: "https://twitter.com/_luisFilipePT",
+    github: "https://github.com/luisFilipePT/shadcn-ui-theme-explorer",
     docs: "https://ui.shadcn.com",
   },
 }

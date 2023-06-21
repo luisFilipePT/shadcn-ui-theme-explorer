@@ -1,142 +1,115 @@
-'use client';
+"use client"
 
-import * as React from 'react';
-import { ReactNode, useEffect, useState } from 'react';
-import themes from '@/themes/index.json';
+import * as React from "react"
+import { ReactNode, useEffect, useState } from "react"
+import { useRouter } from "next/navigation"
+import themes from "@/themes/index.json"
 
 export type ShadcnTheme = {
-  index: number;
-  author: string,
-  authorUsername: string;
-  version: string,
-  name: string,
+  index: number
+  author: string
+  authorUsername: string
+  version: string
+  name: string
   description: string
 }
 
 type ShadcnThemeContextType = {
-  currentTheme: ShadcnTheme;
-  setCurrentTheme: (theme: ShadcnTheme) => void;
-  nextTheme: (theme: ShadcnTheme) => void;
-  previousTheme: (theme: ShadcnTheme) => void;
-};
+  currentTheme: ShadcnTheme
+  setCurrentTheme: (theme: ShadcnTheme) => void
+  nextTheme: string
+  previousTheme: string
+}
 
 type ShadcnThemeProviderProps = {
   children: ReactNode
 }
 
-export const ShadcnThemeContext = React.createContext<ShadcnThemeContextType>(
-  {
-    currentTheme: { index: 0, ...themes[0] },
-    setCurrentTheme: () => {
-    },
-    nextTheme: () => {
-    },
-    previousTheme: () => {
-    },
-  },
-);
+export const ShadcnThemeContext = React.createContext<ShadcnThemeContextType>({
+  currentTheme: { index: 0, ...themes[0] },
+  setCurrentTheme: () => {},
+  nextTheme: "",
+  previousTheme: "",
+})
+
+function getNextThemeName(currentThemeIndex: number) {
+  const nextThemeIndex =
+    currentThemeIndex + 1 >= themes.length ? 0 : currentThemeIndex + 1
+
+  return themes[nextThemeIndex].name.toLowerCase()
+}
+
+function getPreviousThemeName(currentThemeIndex: number) {
+  const previousThemeIndex =
+    currentThemeIndex - 1 >= 0 ? currentThemeIndex - 1 : themes.length - 1
+
+  return themes[previousThemeIndex].name.toLowerCase()
+}
 
 export function ShadcnThemeProvider({ children }: ShadcnThemeProviderProps) {
-
+  const router = useRouter()
+  const [nextThemeName, setNextThemeName] = useState(themes[1].name)
+  const [previousThemeName, setPreviousThemeName] = useState(
+    themes[themes.length - 1].name
+  )
   const [currentTheme, setCurrentTheme] = useState<ShadcnTheme>({
     index: 0,
     ...themes[0],
-  });
+  })
 
   useEffect(() => {
+    const nextThemeName = getNextThemeName(currentTheme.index)
+    setNextThemeName(nextThemeName)
+
+    const previousThemeName = getPreviousThemeName(currentTheme.index)
+    setPreviousThemeName(previousThemeName)
+
     const handleKeyDown = (event: KeyboardEvent) => {
-      switch (event.key) {
-        case 'ArrowLeft':
-          previousTheme();
-          break;
-        case 'ArrowRight':
-          nextTheme();
-          break;
-        default:
-          break;
+      const pathname = window.location.pathname
+
+      if (pathname.includes("about")) {
+        return
       }
-    };
 
-    window.addEventListener('keydown', handleKeyDown);
-
-    return () => {
-      window.removeEventListener('keydown', handleKeyDown);
-    };
-  }, [currentTheme.name]);
-
-  function clearThemeClass() {
-    // remove class that contains theme keyword
-    document.documentElement.classList.remove(
-      ...Array.from(document.documentElement.classList).filter((c) =>
-        c.startsWith('theme-'),
-      ),
-    );
-  }
-
-  function applyTheme(theme: string) {
-    const themeName = theme.toLowerCase();
-
-    handleURLChange(themeName);
-
-    document.documentElement.classList.toggle(`theme-${themeName}`);
-  }
-
-  const handleURLChange = (slug: string) => {
-    const [, , ...nested] = window.location.pathname.split('/');
-
-    window.history.replaceState(
-      {},
-      '',
-      `/${slug}${nested ? `/${nested.join('/')}` : ''}`,
-    );
-  };
-
-  function handleThemeChange(theme: ShadcnTheme) {
-    if (currentTheme.name.toLowerCase() === theme.name.toLowerCase()) {
-      return;
+      switch (event.key) {
+        case "ArrowLeft":
+          router.push(`/${previousThemeName}`)
+          break
+        case "ArrowRight":
+          router.push(`/${nextThemeName}`)
+          break
+        default:
+          break
+      }
     }
 
-    clearThemeClass();
+    window.addEventListener("keydown", handleKeyDown)
 
-    applyTheme(theme.name);
-    setCurrentTheme({ ...theme, index: theme.index ?? themes.indexOf(theme) });
-  }
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown)
+    }
+  }, [currentTheme.name])
 
-  function nextTheme() {
-    clearThemeClass();
-
-    const nextThemeIndex =
-      currentTheme.index + 1 >= themes.length ? 0 : currentTheme.index + 1;
-    const nextTheme = themes[nextThemeIndex];
-
-    applyTheme(nextTheme.name);
-    setCurrentTheme({ ...nextTheme, index: nextThemeIndex });
-  }
-
-  function previousTheme() {
-    clearThemeClass();
-
-    const previousThemeIndex =
-      currentTheme.index - 1 >= 0 ? currentTheme.index - 1 : themes.length - 1;
-    const previousTheme = themes[previousThemeIndex];
-
-    applyTheme(previousTheme.name);
-    setCurrentTheme({ ...previousTheme, index: previousThemeIndex });
+  function handleThemeChange(theme: ShadcnTheme) {
+    setCurrentTheme({ ...theme, index: theme.index ?? themes.indexOf(theme) })
   }
 
   return (
-    <ShadcnThemeContext.Provider value={{
-      currentTheme,
-      setCurrentTheme: handleThemeChange,
-      nextTheme,
-      previousTheme,
-    }}>
+    <ShadcnThemeContext.Provider
+      value={{
+        currentTheme,
+        setCurrentTheme: handleThemeChange,
+        nextTheme: nextThemeName,
+        previousTheme: previousThemeName,
+      }}
+    >
       {children}
     </ShadcnThemeContext.Provider>
-  );
+  )
 }
 
 export function useTheme() {
-  const { currentTheme, setCurrentTheme, nextTheme, previousTheme } = React.useContext(ShadcnThemeContext);
-  return { currentTheme, setCurrentTheme, nextTheme, previousTheme };
+  const { currentTheme, setCurrentTheme, nextTheme, previousTheme } =
+    React.useContext(ShadcnThemeContext)
+  return { currentTheme, setCurrentTheme, nextTheme, previousTheme }
 }

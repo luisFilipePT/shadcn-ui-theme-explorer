@@ -1,9 +1,62 @@
+import Image from "next/image"
+import Link from "next/link"
+import joanaMemoji from "@/images/joana-memoji.webp"
+import luisMemoji from "@/images/luis-memoji.png"
+import { Copyright } from "lucide-react"
+
 export default function Footer() {
   return (
-    <footer className="container inset-x-0 bottom-0 flex items-center justify-center p-4">
-      <p className="text-xs text-muted-foreground">
-        © 2023 Luis Oliveira. All rights reserved.
-      </p>
+    <footer className="container inset-x-0 bottom-0 flex justify-between">
+      <div className="flex items-end">
+        <Link href="https://luis-oliveira.vercel.app/">
+          <Image
+            src={luisMemoji}
+            alt="Luis avatar, just a memoji"
+            width="50"
+            height="50"
+            loading="lazy"
+          />
+        </Link>
+        <Link
+          href="https://luis-oliveira.vercel.app/"
+          className="hidden sm:inline"
+        >
+          <span className="text-sm font-medium text-muted-foreground underline underline-offset-4">
+            Luis Oliveira
+          </span>
+        </Link>
+      </div>
+      <div className="self-end pb-1">
+        <div className="flex items-end text-sm">
+          <Copyright height={17} width={17} />
+          <Link href="https://ui.shadcn.com/" className="hidden sm:inline">
+            &nbsp;
+            <span className="text-sm font-medium text-muted-foreground underline underline-offset-4">
+              shadcn/ui
+            </span>
+          </Link>
+          &nbsp;Theme Explorer {new Date().getFullYear()}.
+        </div>
+      </div>
+      <div className="flex items-end">
+        <Link href="https://luis-oliveira.vercel.app/">
+          <Image
+            src={joanaMemoji}
+            alt="Joana's avatar, just a memoji"
+            width="50"
+            height="50"
+            loading="lazy"
+          />
+        </Link>
+        <Link
+          href="https://luis-oliveira.vercel.app/"
+          className="hidden sm:inline"
+        >
+          <span className="text-sm font-medium text-muted-foreground underline underline-offset-4">
+            Joana Santos
+          </span>
+        </Link>
+      </div>
     </footer>
   )
 }
