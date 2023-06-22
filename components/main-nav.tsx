@@ -43,12 +43,6 @@ export function MainNav({ items }: MainNavProps) {
           <DropdownMenuItem>Install a theme...</DropdownMenuItem>
           <DropdownMenuItem>Download theme</DropdownMenuItem>
           <DropdownMenuItem>Copy URL to share</DropdownMenuItem>
-          <DropdownMenuSeparator />
-          <DropdownMenuItem>
-            <DropdownMenuLabel>
-              <Link href={`/${themeName}/about`}>About</Link>
-            </DropdownMenuLabel>
-          </DropdownMenuItem>
         </DropdownMenuContent>
       </DropdownMenu>
     </div>
