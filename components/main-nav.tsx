@@ -36,11 +36,13 @@ export function MainNav({ items }: MainNavProps) {
         <DropdownMenuTrigger>Help</DropdownMenuTrigger>
         <DropdownMenuContent>
           <DropdownMenuLabel>
-            <Link href={`/${themeName}/`}>Home</Link>
+            <Link href={`/${themeName}/`}>shadcn/ui</Link>
           </DropdownMenuLabel>
           <DropdownMenuSeparator />
-          <DropdownMenuItem>Download file</DropdownMenuItem>
-          <DropdownMenuItem>Share link</DropdownMenuItem>
+          <DropdownMenuItem>Upload a theme...</DropdownMenuItem>
+          <DropdownMenuItem>Install a theme...</DropdownMenuItem>
+          <DropdownMenuItem>Download theme</DropdownMenuItem>
+          <DropdownMenuItem>Copy URL to share</DropdownMenuItem>
           <DropdownMenuSeparator />
           <DropdownMenuItem>
             <DropdownMenuLabel>
