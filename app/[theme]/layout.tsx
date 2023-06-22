@@ -1,20 +1,19 @@
 import "@/styles/globals.css"
 import { Metadata } from "next"
 import themes from "@/themes/index.json"
-import Image from "next/image"
 
 import { siteConfig } from "@/config/site"
 import { fontSans } from "@/lib/fonts"
 import { cn } from "@/lib/utils"
+import { ExamplesNav } from "@/components/examples-nav"
 import Footer from "@/components/footer"
+import PageHeader from "@/components/home/pageHeader"
 import { ShadcnThemeProvider } from "@/components/shadcn-theme-provider"
 import { SiteHeader } from "@/components/site-header"
-import { TailwindIndicator } from "@/components/tailwind-indicator"
-import { ThemeProvider } from "@/components/theme-provider"
-import PageHeader from "@/components/home/pageHeader"
-import { ExamplesNav } from "@/components/examples-nav"
-import { ThemeArrows } from "@/components/theme-arrows"
 import { StyleSwitcher } from "@/components/style-switcher"
+import { TailwindIndicator } from "@/components/tailwind-indicator"
+import { ThemeArrows } from "@/components/theme-arrows"
+import { ThemeProvider } from "@/components/theme-provider"
 
 export async function generateMetadata(params: {
   params: { theme: string }
@@ -70,7 +69,7 @@ export default function RootLayout({ children, params }: RootLayoutProps) {
                 <ThemeArrows params={params}>
                   <div className="container relative pb-10">
                     <StyleSwitcher />
-                    <PageHeader/>
+                    <PageHeader />
 
                     <ExamplesNav />
                     <section className="hidden md:block">
