@@ -19,6 +19,7 @@ import {
   FormLabel,
   FormMessage,
 } from "@/components/react-hook-form/form"
+import { ChangeEvent } from "react"
 
 const notificationsFormSchema = z.object({
   type: z.enum(["all", "mentions", "none"], {
@@ -69,7 +70,7 @@ export function NotificationsForm() {
               <FormLabel>Notify me about...</FormLabel>
               <FormControl>
                 <RadioGroup
-                  onValueChange={field.onChange}
+                  onValueChange={(e)=>field.onChange(e as "all" | "mentions" | "none" | ChangeEvent<Element>)}
                   defaultValue={field.value}
                   className="flex flex-col space-y-1"
                 >
@@ -200,7 +201,7 @@ export function NotificationsForm() {
               <FormControl>
                 <Checkbox
                   checked={field.value}
-                  onCheckedChange={field.onChange}
+                  onCheckedChange={(e)=>field.onChange(e as boolean | ChangeEvent<Element> | undefined)}
                 />
               </FormControl>
               <div className="space-y-1 leading-none">

@@ -18,6 +18,7 @@ import {
   FormLabel,
   FormMessage,
 } from "@/components/react-hook-form/form"
+import { ChangeEvent } from "react"
 
 const appearanceFormSchema = z.object({
   theme: z.enum(["light", "dark"], {
@@ -96,7 +97,7 @@ export function AppearanceForm() {
               </FormDescription>
               <FormMessage />
               <RadioGroup
-                onValueChange={field.onChange}
+                onValueChange={(e)=>field.onChange(e as "light" | "dark" | ChangeEvent<Element>)}
                 defaultValue={field.value}
                 className="grid max-w-md grid-cols-2 gap-8 pt-2"
               >
