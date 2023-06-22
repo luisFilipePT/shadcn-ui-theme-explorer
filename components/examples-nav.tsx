@@ -6,6 +6,7 @@ import { ArrowRight } from "lucide-react"
 
 import { cn } from "@/lib/utils"
 import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area"
+
 import { useTheme } from "./shadcn-theme-provider"
 import { Badge } from "./ui/badge"
 
@@ -56,11 +57,13 @@ const examples = [
 
 interface ExamplesNavProps extends React.HTMLAttributes<HTMLDivElement> {}
 
+// TODO - this can be a server component
+
 export function ExamplesNav({ className, ...props }: ExamplesNavProps) {
   const pathname = usePathname()
-  const { currentTheme } = useTheme();
+  const { currentTheme } = useTheme()
 
-  const themePath = currentTheme.name.toLowerCase();
+  const themePath = currentTheme.name.toLowerCase()
 
   return (
     <div className="relative">
@@ -78,18 +81,16 @@ export function ExamplesNav({ className, ...props }: ExamplesNavProps) {
               )}
             >
               {example.name}{" "}
-              {example.label && (
-                <Badge className="ml-1">
-                  {example.label}
-                </Badge>
-              )}
+              {example.label && <Badge className="ml-1">{example.label}</Badge>}
             </Link>
           ))}
         </div>
         <ScrollBar orientation="horizontal" className="invisible" />
       </ScrollArea>
       <ExampleCodeLink
-        pathname={pathname === `/${themePath}` ? `/${themePath}/home` : pathname}
+        pathname={
+          pathname === `/${themePath}` ? `/${themePath}/home` : pathname
+        }
       />
     </div>
   )

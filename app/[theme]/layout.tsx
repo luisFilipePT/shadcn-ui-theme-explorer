@@ -69,8 +69,7 @@ export default function RootLayout({ children, params }: RootLayoutProps) {
                 <ThemeArrows params={params}>
                   <div className="container relative pb-10">
                     <StyleSwitcher />
-                    <PageHeader />
-
+                    <PageHeader theme={params.theme} />
                     <ExamplesNav />
                     <section className="hidden md:block">
                       <div className="overflow-hidden rounded-lg border bg-background shadow-xl">

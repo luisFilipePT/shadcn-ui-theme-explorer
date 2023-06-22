@@ -3,6 +3,8 @@
 import * as React from "react"
 import { useSelectedLayoutSegments } from "next/navigation"
 
+// TODO - Is this used?
+
 export function StyleSwitcher() {
   const segments = useSelectedLayoutSegments()
 

@@ -1,7 +1,7 @@
 import * as React from "react"
 import { Metadata } from "next"
 import Link from "next/link"
-import { Calendar as CalendarIcon, Star } from "lucide-react"
+import { Star } from "lucide-react"
 
 export const metadata: Metadata = {
   title: "Home page",
