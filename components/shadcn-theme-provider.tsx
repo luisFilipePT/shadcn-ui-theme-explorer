@@ -67,16 +67,16 @@ export function ShadcnThemeProvider({ children }: ShadcnThemeProviderProps) {
     const handleKeyDown = (event: KeyboardEvent) => {
       const pathname = window.location.pathname
 
-      if (pathname.includes("about")) {
-        return
-      }
+      const [, , ...nested] = pathname.split('/');
+
+      const currentPage = nested ? `/${nested.join('/')}` : ''
 
       switch (event.key) {
         case "ArrowLeft":
-          router.push(`/${previousThemeName}`)
+          router.push(`/${previousThemeName}/${currentPage}`)
           break
         case "ArrowRight":
-          router.push(`/${nextThemeName}`)
+          router.push(`/${nextThemeName}/${currentPage}`)
           break
         default:
           break
