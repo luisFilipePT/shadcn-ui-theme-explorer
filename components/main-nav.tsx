@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
+import Image from "next/image"
 import Link from "next/link"
+import logo from "@/images/logo.png"
 
 import { NavItem } from "@/types/nav"
 import { siteConfig } from "@/config/site"
@@ -13,7 +15,6 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
-import { Icons } from "@/components/icons"
 import { useTheme } from "@/components/shadcn-theme-provider"
 
 interface MainNavProps {
@@ -28,7 +29,12 @@ export function MainNav({ items }: MainNavProps) {
   return (
     <div className="flex gap-6 md:gap-10">
       <Link href={`/${themeName}`} className="flex items-center space-x-2">
-        <Icons.logo className="h-6 w-6" />
+        <Image
+          src={logo}
+          alt="shadcn/ui Theme Explorer logo"
+          width="45"
+          height="45"
+        />
         <span className="inline-block font-bold">{siteConfig.name}</span>
       </Link>
 
