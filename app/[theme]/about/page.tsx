@@ -1,6 +1,21 @@
+import { type Metadata } from "next"
+
+import { siteConfig } from "@/config/site"
 import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
 import AuthorsTabs from "@/components/home/tabs"
+
+export const metadata: Metadata = {
+  title: {
+    default: "About",
+    template: `%s - ${siteConfig.name}`,
+  },
+  description: siteConfig.description,
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "white" },
+    { media: "(prefers-color-scheme: dark)", color: "black" },
+  ],
+}
 
 export default function AboutPage() {
   return (
