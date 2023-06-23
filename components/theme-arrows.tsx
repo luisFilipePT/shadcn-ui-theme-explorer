@@ -16,18 +16,16 @@ export function ThemeArrows({ children, params }: { children: ReactNode, params:
 
   const [, , ...nested] = pathname.split('/');
 
-  const currentPage = nested ? `/${nested.join('/')}` : ''
+  const currentPage = nested ? `${nested.join('/')}` : ''
 
   return (
     <>
-      <div className="md:block">
-        <Link href={`/${previousTheme}/${currentPage}`}>
-          <ChevronLeft className="absolute left-0 top-1/2 h-10 w-10 cursor-pointer text-primary md:h-20 md:w-20" />
-        </Link>
-        <Link href={`/${nextTheme}/${currentPage}`}>
-          <ChevronRight className="absolute right-0 top-1/2 h-10 w-10 cursor-pointer text-primary md:h-20 md:w-20" />
-        </Link>
-      </div>
+      <Link href={`/${previousTheme}/${currentPage}`}>
+        <ChevronLeft className="absolute left-0 top-1/2 h-10 w-10 cursor-pointer text-primary md:h-20 md:w-20" />
+      </Link>
+      <Link href={`/${nextTheme}/${currentPage}`}>
+        <ChevronRight className="absolute right-0 top-1/2 h-10 w-10 cursor-pointer text-primary md:h-20 md:w-20" />
+      </Link>
       {children}
     </>
   )
