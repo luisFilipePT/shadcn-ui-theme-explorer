@@ -13,6 +13,7 @@ import { SiteHeader } from "@/components/site-header"
 import { TailwindIndicator } from "@/components/tailwind-indicator"
 import { ThemeArrows } from "@/components/theme-arrows"
 import { ThemeProvider } from "@/components/theme-provider"
+import { Toaster } from "@/components/ui/toaster"
 
 export async function generateMetadata(params: {
   params: { theme: string }
@@ -80,6 +81,7 @@ export default function RootLayout({ children, params }: RootLayoutProps) {
               <Footer />
             </div>
             <TailwindIndicator />
+            <Toaster />
           </ShadcnThemeProvider>
         </ThemeProvider>
       </body>
