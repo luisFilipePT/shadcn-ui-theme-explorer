@@ -64,25 +64,24 @@ export default function RootLayout({ children, params }: RootLayoutProps) {
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <ShadcnThemeProvider>
             <ThemeArrows params={params}>
-              <div className="relative flex min-h-screen flex-col">
+              <div className="flex min-h-screen flex-col">
                 <SiteHeader />
-                  
-                    <div className="flex-1">
-                        <div className="container relative pb-10">
-                          <PageHeader theme={params.theme} />
-                          <ExamplesNav />
-                          <section className="block">
-                            <div className="overflow-hidden rounded-lg border bg-background shadow-xl">
-                              {children}
-                            </div>
-                          </section>
+                <div className="flex-1">
+                    <div className="container pb-10">
+                      <PageHeader theme={params.theme} />
+                      <ExamplesNav />
+                      <section className="block">
+                        <div className="overflow-hidden rounded-lg border bg-background shadow-xl">
+                          {children}
                         </div>
+                      </section>
                     </div>
-                <Footer />
+                </div>
+              <Footer />
               </div>
-              <TailwindIndicator />
               <Toaster />
             </ThemeArrows>
+              <TailwindIndicator />
           </ShadcnThemeProvider>
         </ThemeProvider>
       </body>

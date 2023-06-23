@@ -4,7 +4,6 @@ import Image from "next/image"
 import Link from "next/link"
 import logo from "@/images/logo.png"
 
-import { NavItem } from "@/types/nav"
 import { siteConfig } from "@/config/site"
 import {
   DropdownMenu,
@@ -16,6 +15,7 @@ import {
 } from "@/components/ui/dropdown-menu"
 import { useToast } from "./ui/use-toast"
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "./ui/dialog"
+import { useTheme } from "./shadcn-theme-provider"
 
 export function copyToClipboard(value: string) {
   navigator.clipboard.writeText(value);
@@ -24,11 +24,14 @@ export function copyToClipboard(value: string) {
 const redirectUrls = {
   shadcnUi: 'https://ui.shadcn.com/',
   uploadTheme: 'https://github.com/luisFilipePT/shadcn-ui-theme-explorer#upload-a-theme',
-  installTheme: 'https://github.com/luisFilipePT/shadcn-ui-theme-explorer#install-a-theme'
+  installTheme: 'https://github.com/luisFilipePT/shadcn-ui-theme-explorer#install-a-theme',
+  downloadTheme: (theme: string) => `https://github.com/luisFilipePT/shadcn-ui-theme-explorer/tree/main/styles/themes/${theme.toLowerCase()}.css`
 }
 
 
 export function MainNav() {
+
+  const { currentTheme } = useTheme();
 
   const { toast } = useToast()
 
@@ -79,10 +82,10 @@ export function MainNav() {
         
         <DialogContent>
           <DialogHeader>
-            <DialogTitle>Are you sure absolutely sure?</DialogTitle>
             <DialogDescription>
-              This action cannot be undone. This will permanently delete your account
-              and remove your data from our servers.
+              Copy the content from <Link href={redirectUrls.downloadTheme(currentTheme.name)} className="text-primary">
+                 this file 
+              </Link> to your <span className="text-primary">global.css</span> file.
             </DialogDescription>
           </DialogHeader>
         </DialogContent>

@@ -12,7 +12,7 @@ export default function HomePage() {
   return (
     <section className="container p-2 max-w-[80%] md:pb-10">
       <h1 className="scroll-m-20 text-xl md:text-4xl font-extrabold tracking-tight lg:text-5xl">
-        <p className="center py-4 md:py-8 text-center text-3xl md:text-8xl">Why so dark?</p>
+        <p className="center py-4 md:py-8 text-center text-3xl md:text-8xl">Why so bland?</p>
         <span className="inline-block bg-gradient-to-r from-ring to-foreground bg-clip-text py-2 md:p-2 text-transparent">
           Color the web with beautifully designed themes
         </span>
