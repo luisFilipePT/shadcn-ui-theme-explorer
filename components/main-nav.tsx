@@ -48,7 +48,7 @@ export function MainNav() {
           width="45"
           height="45"
         />
-        <span className="inline-block font-bold">{siteConfig.name}</span>
+        <span className="hidden md:inline-block font-bold">{siteConfig.name}</span>
       </div>
       <Dialog>
         <DropdownMenu>

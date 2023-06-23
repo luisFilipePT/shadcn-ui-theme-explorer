@@ -70,7 +70,7 @@ export default function RootLayout({ children, params }: RootLayoutProps) {
                   <div className="container relative pb-10">
                     <PageHeader theme={params.theme} />
                     <ExamplesNav />
-                    <section className="hidden md:block">
+                    <section className="block">
                       <div className="overflow-hidden rounded-lg border bg-background shadow-xl">
                         {children}
                       </div>

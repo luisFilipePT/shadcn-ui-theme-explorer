@@ -10,10 +10,10 @@ export const metadata: Metadata = {
 
 export default function HomePage() {
   return (
-    <section className="container max-w-[80%] md:pb-10">
-      <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
-        <p className="center py-8 text-center text-8xl">Why so dark?</p>
-        <span className="inline-block bg-gradient-to-r from-ring to-foreground bg-clip-text p-2 text-transparent">
+    <section className="container p-2 max-w-[80%] md:pb-10">
+      <h1 className="scroll-m-20 text-xl md:text-4xl font-extrabold tracking-tight lg:text-5xl">
+        <p className="center py-4 md:py-8 text-center text-3xl md:text-8xl">Why so dark?</p>
+        <span className="inline-block bg-gradient-to-r from-ring to-foreground bg-clip-text py-2 md:p-2 text-transparent">
           Color the web with beautifully designed themes
         </span>
       </h1>
@@ -41,10 +41,10 @@ export default function HomePage() {
         </Link>{" "}
         beautifully crafted components.
       </p>
-      <h2 className="mt-10 scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight transition-colors first:mt-0">
+      <h2 className="mt-6 md:mt-10 scroll-m-20 border-b pb-2 text-xl md:text-3xl font-semibold tracking-tight transition-colors first:mt-0">
         Contributions are welcome, upload new themes or help us improve
       </h2>
-      <p className="mt-10 leading-7">
+      <p className="mt-4 md:mt-10 leading-7 pb-4">
         If you enjoy using this tool, please consider{" "}
         <Star className="mb-1 inline text-amber-300" size={20} fill="yellow" />{" "}
         the repo and follow the authors to hear them rumbling on Open Source and

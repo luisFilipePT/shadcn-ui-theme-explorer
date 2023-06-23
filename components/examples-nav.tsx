@@ -77,7 +77,8 @@ export function ExamplesNav({ className, ...props }: ExamplesNavProps) {
                 "flex items-center px-4",
                 pathname?.startsWith(`/${themePath}${example.href}`)
                   ? "font-bold text-primary"
-                  : "font-medium text-muted-foreground"
+                  : "font-medium text-muted-foreground",
+                  example.href !== '/home' && "hidden md:block"
               )}
             >
               {example.name}{" "}
