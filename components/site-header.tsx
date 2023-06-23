@@ -5,6 +5,7 @@ import { buttonVariants } from "@/components/ui/button"
 import { Icons } from "@/components/icons"
 import { MainNav } from "@/components/main-nav"
 import { ThemeToggle } from "@/components/theme-toggle"
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuTrigger } from "./ui/dropdown-menu"
 
 export function SiteHeader() {
   return (
@@ -28,21 +29,41 @@ export function SiteHeader() {
                 <span className="sr-only">GitHub</span>
               </div>
             </Link>
-            <Link
-              href={siteConfig.links.twitter}
-              target="_blank"
-              rel="noreferrer"
-            >
-              <div
-                className={buttonVariants({
-                  size: "sm",
-                  variant: "ghost",
-                })}
-              >
-                <Icons.twitter className="h-5 w-5 fill-current" />
-                <span className="sr-only">Twitter</span>
-              </div>
-            </Link>
+            <DropdownMenu>
+              <DropdownMenuTrigger>
+                <div
+                  className={buttonVariants({
+                    size: "sm",
+                    variant: "ghost",
+                  })}
+                >
+                  <Icons.twitter className="h-5 w-5 fill-current" />
+                  <span className="sr-only">Twitter</span>
+                </div>
+              
+              </DropdownMenuTrigger>
+              <DropdownMenuContent>
+                <DropdownMenuItem>
+                  <Link
+                  href={siteConfig.links.twitter}
+                  target="_blank"
+                  rel="noreferrer"
+                  >
+                    @__luisFilipePT
+                  </Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem>
+                  <Link
+                  href={siteConfig.links.twitterJoana}
+                  target="_blank"
+                  rel="noreferrer"
+                  >
+                    @joanamcsa
+                  </Link>
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>     
+            
             <ThemeToggle />
           </nav>
         </div>

@@ -10,7 +10,6 @@ import Footer from "@/components/footer"
 import PageHeader from "@/components/home/pageHeader"
 import { ShadcnThemeProvider } from "@/components/shadcn-theme-provider"
 import { SiteHeader } from "@/components/site-header"
-import { StyleSwitcher } from "@/components/style-switcher"
 import { TailwindIndicator } from "@/components/tailwind-indicator"
 import { ThemeArrows } from "@/components/theme-arrows"
 import { ThemeProvider } from "@/components/theme-provider"
@@ -68,7 +67,6 @@ export default function RootLayout({ children, params }: RootLayoutProps) {
               <div className="flex-1">
                 <ThemeArrows params={params}>
                   <div className="container relative pb-10">
-                    <StyleSwitcher />
                     <PageHeader theme={params.theme} />
                     <ExamplesNav />
                     <section className="hidden md:block">
