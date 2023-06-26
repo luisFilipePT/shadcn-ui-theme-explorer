@@ -1,22 +1,79 @@
-# next-template
 
-A Next.js 13 template for building apps with Radix UI and Tailwind CSS.
+[![shadcn/ui Theme Explorer released under the MIT license.](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE)
+<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors-)
+<!-- ALL-CONTRIBUTORS-BADGE:END -->
+[![PRs welcome!](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](./CONTRIBUTING.md)
+[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 
-## Usage
+
+![image](https://github.com/luisFilipePT/shadcn-ui-theme-explorer/assets/97113028/c2ab567b-f990-43a9-9266-e9c211b0e6b9)
+
+<h1 align="center">
+  shadcn/ui Theme Explorer
+</h1>
+<p align="center">
+  Color the web with beautifully designed themes
+</p>
+
+Inspired by [@peduarte](https://github.com/peduarte)'s work on [Raycast Theme Explorer](https://themes.ray.so/), a collection of themes designed to complement [shadcn/ui](https://ui.shadcn.com/) beautifully crafted components.
+
+## What’s In This Document
+
+- [Upload a theme](#-upload-a-theme)
+- [License](#memo-license)
+- [Thanks to Our Contributors](#-thanks)
+
+## Contributing
+
+This is a [Next.js 13](https://nextjs.org/) app. If you're unfamiliar with it, check out the [Next.js Documentation](https://nextjs.org/docs).
+
+Download the repo and run the development server:
 
 ```bash
-npx create-next-app -e https://github.com/shadcn/next-template
+npm run dev
 ```
 
-## Features
+## 🎨 Upload a theme
 
-- Next.js 13 App Directory
-- Radix UI Primitives
-- Tailwind CSS
-- Icons from [Lucide](https://lucide.dev)
-- Dark mode with `next-themes`
-- Tailwind CSS class sorting, merging and linting.
+1. Add your theme info to the [themes](https://github.com/luisFilipePT/shadcn-ui-theme-explorer/blob/main/themes/index.json) file.
+2. Create a file inside the folder [`styles/themes`](https://github.com/luisFilipePT/shadcn-ui-theme-explorer/blob/main/styles/themes) with the name of the theme you added in the previous step (if it contains spaces, replace them by `-`).
+3. Same format as this one: _insert example here_
+4. Import the file you created in the [`global.css`](https://github.com/luisFilipePT/shadcn-ui-theme-explorer/blob/main/styles/themes/global.css) file.
 
-## License
+## ❗ Code of Conduct
 
-Licensed under the [MIT license](https://github.com/shadcn/ui/blob/main/LICENSE.md).
+We expect everyone to abide by our [**Code of Conduct**](./CODE_OF_CONDUCT.md). Please read it. 🤝
+
+## :memo: License
+
+Licensed under the [MIT License](./LICENSE).
+
+## 💜 Thanks
+
+Thanks to everyone contributing in any manner to this repo and we extend this thanks to everyone working on Open Source.
+
+**Sharing is Caring**
+
+## Contributors ✨
+
+Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<table>
+  <tbody>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://luis-oliveira.vercel.app/"><img src="https://avatars.githubusercontent.com/u/9373787?v=4?s=100" width="100px;" alt="Luis Filipe"/><br /><sub><b>Luis Filipe</b></sub></a><br /><a href="https://github.com/luisFilipePT/shadcn-ui-theme-explorer/commits?author=luisFilipePT" title="Code">💻</a> <a href="https://github.com/luisFilipePT/shadcn-ui-theme-explorer/commits?author=luisFilipePT" title="Documentation">📖</a> <a href="#design-luisFilipePT" title="Design">🎨</a> <a href="#ideas-luisFilipePT" title="Ideas, Planning, & Feedback">🤔</a> <a href="#maintenance-luisFilipePT" title="Maintenance">🚧</a> <a href="https://github.com/luisFilipePT/shadcn-ui-theme-explorer/pulls?q=is%3Apr+reviewed-by%3AluisFilipePT" title="Reviewed Pull Requests">👀</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://joanasantos.vercel.app/"><img src="https://avatars.githubusercontent.com/u/97113028?v=4" width="100px;" alt="Joana Santos"/><br /><sub><b>Joana Santos</b></sub></a><br /><a href="https://github.com/luisFilipePT/shadcn-ui-theme-explorer/commits?author=joanamcs" title="Code">💻</a> <a href="https://github.com/luisFilipePT/shadcn-ui-theme-explorer/commits?author=joanamcs" title="Documentation">📖</a> <a href="#design-luisFilipePT" title="Design">🎨</a> <a href="#ideas-luisFilipePT" title="Ideas, Planning, & Feedback">🤔</a> <a href="#maintenance-luisFilipePT" title="Maintenance">🚧</a> <a href="https://github.com/luisFilipePT/shadcn-ui-theme-explorer/pulls?q=is%3Apr+reviewed-by%3Ajoanamcs" title="Reviewed Pull Requests">👀</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- markdownlint-restore -->
+<!-- prettier-ignore-end -->
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
+This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind are welcome!
