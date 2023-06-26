@@ -1,11 +1,10 @@
 import {
-  // ArrowDownToLine,
   ArrowUpCircle,
-  // ArrowUpToLine,
+  ArrowDownCircle,
+  ArrowRightCircle,
   CheckCircle2,
   Circle,
   HelpCircle,
-  // ArrowRightToLine,
   XCircle,
 } from "lucide-react"
 
@@ -56,12 +55,12 @@ export const priorities = [
   {
     label: "Low",
     value: "low",
-    icon: ArrowUpCircle,
+    icon: ArrowDownCircle,
   },
   {
     label: "Medium",
     value: "medium",
-    icon: ArrowUpCircle,
+    icon: ArrowRightCircle,
   },
   {
     label: "High",
