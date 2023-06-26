@@ -4,7 +4,7 @@ import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { ArrowRight } from "lucide-react"
 
-import { cn } from "@/lib/utils"
+import { cn, sanitizeName } from "@/lib/utils"
 import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area"
 
 import { useTheme } from "./shadcn-theme-provider"
@@ -63,7 +63,7 @@ export function ExamplesNav({ className, ...props }: ExamplesNavProps) {
   const pathname = usePathname()
   const { currentTheme } = useTheme()
 
-  const themePath = currentTheme.name.toLowerCase()
+  const themePath = sanitizeName(currentTheme.name)
 
   return (
     <div className="relative">

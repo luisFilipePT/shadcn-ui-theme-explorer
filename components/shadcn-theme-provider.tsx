@@ -4,6 +4,7 @@ import * as React from "react"
 import { ReactNode, useEffect, useState } from "react"
 import { useRouter } from "next/navigation"
 import themes from "@/themes/index.json"
+import { sanitizeName } from "@/lib/utils"
 
 export type ShadcnTheme = {
   index: number
@@ -36,14 +37,14 @@ function getNextThemeName(currentThemeIndex: number) {
   const nextThemeIndex =
     currentThemeIndex + 1 >= themes.length ? 0 : currentThemeIndex + 1
 
-  return themes[nextThemeIndex].name.toLowerCase()
+  return sanitizeName(themes[nextThemeIndex].name)
 }
 
 function getPreviousThemeName(currentThemeIndex: number) {
   const previousThemeIndex =
     currentThemeIndex - 1 >= 0 ? currentThemeIndex - 1 : themes.length - 1
 
-  return themes[previousThemeIndex].name.toLowerCase()
+  return sanitizeName(themes[previousThemeIndex].name)
 }
 
 export function ShadcnThemeProvider({ children }: ShadcnThemeProviderProps) {

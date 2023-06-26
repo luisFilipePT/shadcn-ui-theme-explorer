@@ -1,8 +1,9 @@
+import { sanitizeName } from "@/lib/utils"
 import themes from "@/themes/index.json"
 
 export default function PageHeader({ theme }: { theme: string }) {
   const currentTheme =
-    themes.find((t) => t.name.toLowerCase() === theme.toLowerCase()) ??
+    themes.find((t) => sanitizeName(t.name) === sanitizeName(theme)) ??
     themes[0]
 
   return (

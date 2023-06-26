@@ -16,6 +16,7 @@ import {
 import { useToast } from "./ui/use-toast"
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "./ui/dialog"
 import { useTheme } from "./shadcn-theme-provider"
+import { sanitizeName } from "@/lib/utils"
 
 export function copyToClipboard(value: string) {
   navigator.clipboard.writeText(value);
@@ -25,7 +26,7 @@ const redirectUrls = {
   shadcnUi: 'https://ui.shadcn.com/',
   uploadTheme: 'https://github.com/luisFilipePT/shadcn-ui-theme-explorer#upload-a-theme',
   installTheme: 'https://github.com/luisFilipePT/shadcn-ui-theme-explorer#install-a-theme',
-  downloadTheme: (theme: string) => `https://github.com/luisFilipePT/shadcn-ui-theme-explorer/tree/main/styles/themes/${theme.toLowerCase()}.css`
+  downloadTheme: (theme: string) => `https://github.com/luisFilipePT/shadcn-ui-theme-explorer/tree/main/styles/themes/${sanitizeName(theme)}.css`
 }
 
 

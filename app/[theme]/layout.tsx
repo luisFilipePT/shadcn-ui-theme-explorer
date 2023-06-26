@@ -4,7 +4,7 @@ import themes from "@/themes/index.json"
 
 import { siteConfig } from "@/config/site"
 import { fontSans } from "@/lib/fonts"
-import { cn } from "@/lib/utils"
+import { cn, sanitizeName } from "@/lib/utils"
 import { ExamplesNav } from "@/components/examples-nav"
 import Footer from "@/components/footer"
 import PageHeader from "@/components/home/pageHeader"
@@ -21,7 +21,7 @@ export async function generateMetadata(params: {
   // read route params
   const currentTheme =
     themes.find(
-      (t) => t.name.toLowerCase() === params.params.theme?.toLowerCase()
+      (t) => sanitizeName(t.name) === sanitizeName(params.params.theme)
     ) ?? themes[0]
 
   return {
