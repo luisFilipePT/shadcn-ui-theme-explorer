@@ -38,8 +38,73 @@ npm run dev
 
 1. Add your theme info to the [themes](https://github.com/luisFilipePT/shadcn-ui-theme-explorer/blob/main/themes/index.json) file.
 2. Create a file inside the folder [`styles/themes`](https://github.com/luisFilipePT/shadcn-ui-theme-explorer/blob/main/styles/themes) with the name of the theme you added in the previous step (if it contains spaces, replace them by `-`).
-3. Same format as this one: _insert example here_
-4. Import the file you created in the [`global.css`](https://github.com/luisFilipePT/shadcn-ui-theme-explorer/blob/main/styles/themes/global.css) file.
+3. Same format as the following example:
+```css
+.theme-{theme-name}.light {
+  --background: 220, 16%, 96%;
+  --foreground: 222, 20%, 16%;
+
+  --muted: 215, 14%, 80%;
+  --muted-foreground: 222, 20%, 16%;
+
+  --popover: 220, 16%, 96%;
+  --popover-foreground: 222, 20%, 16%;
+
+  --border: 222, 20%, 70%;
+  --input: 222, 20%, 70%;
+
+  --card: 220, 16%, 96%;
+  --card-foreground: 222, 20%, 16%;
+
+  --primary: 222, 20%, 70%;
+  --primary-foreground: 220, 16%, 96%;
+
+  --secondary: 215, 14%, 80%;
+  --secondary-foreground: 222, 20%, 16%;
+
+  --accent: 215, 14%, 80%;
+  --accent-foreground: 222, 20%, 16%;
+
+  --destructive: 0, 80%, 50%;
+  --destructive-foreground: 222, 20%, 16%;
+
+  --ring: 222, 20%, 70%;
+}
+
+.theme-{theme-name}.dark {
+  --background: 220, 16%, 16%;
+  --foreground: 222, 20%, 96%;
+
+  --muted: 215, 14%, 25%;
+  --muted-foreground: 222, 20%, 96%;
+
+  --popover: 220, 16%, 16%;
+  --popover-foreground: 222, 20%, 96%;
+
+  --border: 222, 20%, 40%;
+  --input: 222, 20%, 40%;
+
+  --card: 220, 16%, 16%;
+  --card-foreground: 222, 20%, 96%;
+
+  --primary: 222, 20%, 40%;
+  --primary-foreground: 220, 16%, 16%;
+
+  --secondary: 215, 14%, 25%;
+  --secondary-foreground: 222, 20%, 96%;
+
+  --accent: 215, 14%, 25%;
+  --accent-foreground: 222, 20%, 96%;
+
+  --destructive: 0, 80%, 50%;
+  --destructive-foreground: 222, 20%, 96%;
+
+  --ring: 222, 20%, 40%;
+}
+
+```
+    
+5. Import the file you just created in the [`global.css`](https://github.com/luisFilipePT/shadcn-ui-theme-explorer/blob/main/styles/themes/global.css) file.
 
 ## ❗ Code of Conduct
 
