@@ -74,7 +74,7 @@ export function ExamplesNav({ className, ...props }: ExamplesNavProps) {
               href={`/${themePath}${example.href}`}
               key={example.href}
               className={cn(
-                "items-center px-4 hidden md:flex",
+                "hidden items-center px-4 md:flex",
                 pathname?.startsWith(`/${themePath}${example.href}`)
                   ? "font-bold text-primary"
                   : "font-medium text-muted-foreground"
