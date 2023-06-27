@@ -24,8 +24,7 @@ export function copyToClipboard(value: string) {
 
 const redirectUrls = {
   shadcnUi: 'https://ui.shadcn.com/',
-  uploadTheme: 'https://github.com/luisFilipePT/shadcn-ui-theme-explorer#upload-a-theme',
-  installTheme: 'https://github.com/luisFilipePT/shadcn-ui-theme-explorer#install-a-theme',
+  uploadTheme: 'https://github.com/luisFilipePT/shadcn-ui-theme-explorer#-upload-a-theme',
   downloadTheme: (theme: string) => `https://github.com/luisFilipePT/shadcn-ui-theme-explorer/tree/main/styles/themes/${sanitizeName(theme)}.css`
 }
 
@@ -65,11 +64,6 @@ export function MainNav() {
             <DropdownMenuItem>
               <Link href={redirectUrls.uploadTheme}>
                 Upload a theme...
-              </Link>
-            </DropdownMenuItem>
-            <DropdownMenuItem>
-              <Link href={redirectUrls.installTheme}>
-                Install a theme...
               </Link>
             </DropdownMenuItem>
             <DialogTrigger asChild>
