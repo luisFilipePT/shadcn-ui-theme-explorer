@@ -15,7 +15,7 @@
   --card-foreground: 16, 43%, 34%;
 
   --primary: 28, 46%, 56%;
-  --primary-foreground: 38, 77%, 88%;
+  --primary-foreground: 60, 70%, 90%;
 
   --secondary: 39, 100%, 73%;
   --secondary-foreground: 16, 43%, 34%;
@@ -46,13 +46,13 @@
   --card-foreground: 38, 77%, 88%;
 
   --primary: 28, 46%, 56%;
-  --primary-foreground: 16, 43%, 34%;
+  --primary-foreground: 60, 70%, 90%;
 
   --secondary: 39, 100%, 73%;
-  --secondary-foreground: 38, 77%, 88%;
+  --secondary-foreground: 16, 43%, 34%;
 
-  --accent: 39, 100%, 73%;
-  --accent-foreground: 38, 77%, 88%;
+  --accent: 39, 100%, 52%;
+  --accent-foreground: 16, 43%, 34%;
 
   --destructive: 38, 77%, 88%;
   --destructive-foreground: 16, 43%, 34%;

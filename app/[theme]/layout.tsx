@@ -17,6 +17,8 @@ import { TailwindIndicator } from "@/components/tailwind-indicator"
 import { ThemeArrows } from "@/components/theme-arrows"
 import { ThemeProvider } from "@/components/theme-provider"
 
+import og from "@/public/og.jpg"
+
 export async function generateMetadata(params: {
   params: { theme: string }
 }): Promise<Metadata> {
@@ -36,6 +38,21 @@ export async function generateMetadata(params: {
       { media: "(prefers-color-scheme: light)", color: "white" },
       { media: "(prefers-color-scheme: dark)", color: "black" },
     ],
+    twitter: {
+      site: "https://shadcn-ui-theme-explorer.vercel.app/",
+      title: siteConfig.name,
+      description: siteConfig.description,
+      creator: "@_luisFilipePT",
+      images: og.src,
+    },
+    openGraph: {
+      title: siteConfig.name,
+      description: siteConfig.description,
+      images: og.src,
+      authors: ["Luis Filipe", "Joana Santos"],
+      url: "https://shadcn-ui-theme-explorer.vercel.app/",
+      locale: "en_GB",
+    },
     icons: {
       icon: "/favicon.ico",
       shortcut: "/favicon-16x16.png",

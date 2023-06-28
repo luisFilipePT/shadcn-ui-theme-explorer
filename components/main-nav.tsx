@@ -25,7 +25,11 @@ export function copyToClipboard(value: string) {
 const redirectUrls = {
   shadcnUi: 'https://ui.shadcn.com/',
   uploadTheme: 'https://github.com/luisFilipePT/shadcn-ui-theme-explorer#-upload-a-theme',
-  downloadTheme: (theme: string) => `https://github.com/luisFilipePT/shadcn-ui-theme-explorer/tree/main/styles/themes/${sanitizeName(theme)}.css`
+  downloadTheme: (theme: string) => {
+    if(theme === 'default') {
+      return `https://github.com/luisFilipePT/shadcn-ui-theme-explorer/tree/main/styles/global.css`
+    }
+    return `https://github.com/luisFilipePT/shadcn-ui-theme-explorer/tree/main/styles/themes/${sanitizeName(theme)}.css`}
 }
 
 
@@ -77,10 +81,13 @@ export function MainNav() {
         
         <DialogContent>
           <DialogHeader>
+            <DialogTitle>
+              Ready to color your website?
+            </DialogTitle>
             <DialogDescription>
-              Copy the content from <Link href={redirectUrls.downloadTheme(currentTheme.name)} className="text-primary">
-                 this file 
-              </Link> to your <span className="text-primary">global.css</span> file.
+                  1. Copy the content from <Link href={redirectUrls.downloadTheme(currentTheme.name)} className="text-primary">
+                    this theme file.
+                  </Link> <br /> 2. Replace the content from the classes .root and .dark in your <span className="text-primary">global.css</span> file.
             </DialogDescription>
           </DialogHeader>
         </DialogContent>
