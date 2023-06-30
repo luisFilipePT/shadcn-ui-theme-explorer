@@ -2,7 +2,6 @@ import "@/styles/globals.css"
 import { type ReactNode } from "react"
 import { Metadata } from "next"
 import themes from "@/themes/index.json"
-import { Analytics } from "@vercel/analytics/react"
 
 import { siteConfig } from "@/config/site"
 import { fontSans } from "@/lib/fonts"
@@ -18,6 +17,7 @@ import { ThemeArrows } from "@/components/theme-arrows"
 import { ThemeProvider } from "@/components/theme-provider"
 
 import og from "@/public/og.jpg"
+import PHProvider from "./providers"
 
 export async function generateMetadata(params: {
   params: { theme: string }
@@ -74,38 +74,40 @@ export default function RootLayout({ children, params }: RootLayoutProps) {
       className={`theme-${params.theme}`}
     >
       <head />
-      <body
-        className={cn(
-          "min-h-screen bg-background font-sans antialiased",
-          fontSans.variable
-        )}
-        suppressHydrationWarning={true}
-      >
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <ShadcnThemeProvider>
-            <ThemeArrows params={params}>
-              <div className="flex min-h-screen flex-col">
-                <SiteHeader />
-                <div className="flex-1">
-                  <div className="container pb-10">
-                    <PageHeader theme={params.theme} />
-                    <ExamplesNav />
-                    <section className="block">
-                      <div className="overflow-hidden rounded-lg border bg-background shadow-xl">
-                        {children}
-                      </div>
-                    </section>
+
+      <PHProvider>
+        <body
+          className={cn(
+            "min-h-screen bg-background font-sans antialiased",
+            fontSans.variable
+          )}
+          suppressHydrationWarning={true}
+        >
+          <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+            <ShadcnThemeProvider>
+              <ThemeArrows params={params}>
+                <div className="flex min-h-screen flex-col">
+                  <SiteHeader />
+                  <div className="flex-1">
+                    <div className="container pb-10">
+                      <PageHeader theme={params.theme} />
+                      <ExamplesNav />
+                      <section className="block">
+                        <div className="overflow-hidden rounded-lg border bg-background shadow-xl">
+                          {children}
+                        </div>
+                      </section>
+                    </div>
                   </div>
+                  <Footer />
                 </div>
-                <Footer />
-              </div>
-              <Toaster />
-            </ThemeArrows>
-            <TailwindIndicator />
-            <Analytics />
-          </ShadcnThemeProvider>
-        </ThemeProvider>
-      </body>
+                <Toaster />
+              </ThemeArrows>
+              <TailwindIndicator />
+            </ShadcnThemeProvider>
+          </ThemeProvider>
+        </body>
+      </PHProvider>
     </html>
   )
 }
