@@ -2,7 +2,6 @@ import "@/styles/globals.css"
 import { type ReactNode } from "react"
 import { Metadata } from "next"
 import themes from "@/themes/index.json"
-import { Analytics } from "@vercel/analytics/react"
 
 import { siteConfig } from "@/config/site"
 import { fontSans } from "@/lib/fonts"
@@ -105,7 +104,6 @@ export default function RootLayout({ children, params }: RootLayoutProps) {
                 <Toaster />
               </ThemeArrows>
               <TailwindIndicator />
-              <Analytics />
             </ShadcnThemeProvider>
           </ThemeProvider>
         </body>
