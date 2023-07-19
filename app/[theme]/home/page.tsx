@@ -12,7 +12,9 @@ export default function HomePage() {
   return (
     <section className="container max-w-[80%] p-2 md:pb-10">
       <h1 className="scroll-m-20 text-xl font-extrabold tracking-tight md:text-4xl lg:text-5xl">
-        <p className="center py-4 text-center text-3xl md:py-8 md:text-8xl">Why so bland?</p>
+        <p className="center py-4 text-center text-3xl md:py-8 md:text-8xl">
+          Why so bland?
+        </p>
         <span className="inline-block bg-gradient-to-r from-ring to-foreground bg-clip-text py-2 text-transparent md:p-2">
           Color the web with beautifully designed themes
         </span>
@@ -45,8 +47,17 @@ export default function HomePage() {
         Contributions are welcome, upload new themes or help us improve
       </h2>
       <p className="mt-4 pb-4 leading-7 md:mt-10">
-        If you enjoy using this tool, please consider{" "}
-        <Star className="mb-1 inline text-amber-300" size={20} fill="yellow" />{" "}
+        If you enjoy using this tool, please consider
+        <Link
+          href="https://github.com/luisFilipePT/shadcn-ui-theme-explorer"
+          className="px-2"
+        >
+          <Star
+            className="mb-1 inline text-amber-300"
+            size={20}
+            fill="yellow"
+          />
+        </Link>
         the repo and follow the authors to hear them rumbling on Open Source and
         more.
       </p>

@@ -1,6 +1,7 @@
 import "@/styles/globals.css"
+
 import { type ReactNode } from "react"
-import { Metadata } from "next"
+import { type Metadata } from "next"
 import themes from "@/themes/index.json"
 
 import { siteConfig } from "@/config/site"
@@ -16,7 +17,6 @@ import { TailwindIndicator } from "@/components/tailwind-indicator"
 import { ThemeArrows } from "@/components/theme-arrows"
 import { ThemeProvider } from "@/components/theme-provider"
 
-import og from "@/public/og.jpg"
 import PHProvider from "./providers"
 
 export async function generateMetadata(params: {
@@ -43,15 +43,41 @@ export async function generateMetadata(params: {
       title: siteConfig.name,
       description: siteConfig.description,
       creator: "@_luisFilipePT",
-      images: og.src,
+      images: [
+        {
+          url: "https://shadcn-ui-theme-explorer.vercel.app/og.jpg",
+          width: 1200,
+          height: 628,
+        },
+      ],
+      locale: "en-US",
+      type: "website",
     },
     openGraph: {
       title: siteConfig.name,
       description: siteConfig.description,
-      images: og.src,
       authors: ["Luis Filipe", "Joana Santos"],
       url: "https://shadcn-ui-theme-explorer.vercel.app/",
-      locale: "en_GB",
+      locale: "en_US",
+      siteName: "shadcn-ui-theme-explorer.vercel.app",
+      images: [
+        {
+          url: "https://shadcn-ui-theme-explorer.vercel.app/og.jpg",
+          width: 1200,
+          height: 628,
+        },
+      ],
+    },
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        "max-video-preview": -1,
+        "max-image-preview": "large",
+        "max-snippet": -1,
+      },
     },
     icons: {
       icon: "/favicon.ico",
@@ -74,7 +100,6 @@ export default function RootLayout({ children, params }: RootLayoutProps) {
       className={`theme-${params.theme}`}
     >
       <head />
-
       <PHProvider>
         <body
           className={cn(
