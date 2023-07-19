@@ -50,8 +50,6 @@ export async function generateMetadata(params: {
           height: 628,
         },
       ],
-      locale: "en-US",
-      type: "website",
     },
     openGraph: {
       title: siteConfig.name,
