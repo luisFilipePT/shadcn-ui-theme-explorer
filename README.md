@@ -103,7 +103,7 @@ npm run dev
 }
 
 ```
-    
+
 5. Import the file you just created in the [`global.css`](https://github.com/luisFilipePT/shadcn-ui-theme-explorer/blob/main/styles/themes/global.css) file.
 
 ## ❗ Code of Conduct
@@ -130,7 +130,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <table>
   <tbody>
     <tr>
-      <td align="center" valign="top" width="14.28%"><a href="https://luis-oliveira.vercel.app/"><img src="https://avatars.githubusercontent.com/u/9373787?v=4?s=100" width="100px;" alt="Luis Filipe"/><br /><sub><b>Luis Filipe</b></sub></a><br /><a href="https://github.com/luisFilipePT/shadcn-ui-theme-explorer/commits?author=luisFilipePT" title="Code">💻</a> <a href="https://github.com/luisFilipePT/shadcn-ui-theme-explorer/commits?author=luisFilipePT" title="Documentation">📖</a> <a href="#design-luisFilipePT" title="Design">🎨</a> <a href="#ideas-luisFilipePT" title="Ideas, Planning, & Feedback">🤔</a> <a href="#maintenance-luisFilipePT" title="Maintenance">🚧</a> <a href="https://github.com/luisFilipePT/shadcn-ui-theme-explorer/pulls?q=is%3Apr+reviewed-by%3AluisFilipePT" title="Reviewed Pull Requests">👀</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://www.luisfilipept.com/"><img src="https://avatars.githubusercontent.com/u/9373787?v=4?s=100" width="100px;" alt="Luis Filipe"/><br /><sub><b>Luis Filipe</b></sub></a><br /><a href="https://github.com/luisFilipePT/shadcn-ui-theme-explorer/commits?author=luisFilipePT" title="Code">💻</a> <a href="https://github.com/luisFilipePT/shadcn-ui-theme-explorer/commits?author=luisFilipePT" title="Documentation">📖</a> <a href="#design-luisFilipePT" title="Design">🎨</a> <a href="#ideas-luisFilipePT" title="Ideas, Planning, & Feedback">🤔</a> <a href="#maintenance-luisFilipePT" title="Maintenance">🚧</a> <a href="https://github.com/luisFilipePT/shadcn-ui-theme-explorer/pulls?q=is%3Apr+reviewed-by%3AluisFilipePT" title="Reviewed Pull Requests">👀</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://joanasantos.vercel.app/"><img src="https://avatars.githubusercontent.com/u/97113028?v=4" width="100px;" alt="Joana Santos"/><br /><sub><b>Joana Santos</b></sub></a><br /><a href="https://github.com/luisFilipePT/shadcn-ui-theme-explorer/commits?author=joanamcs" title="Code">💻</a> <a href="https://github.com/luisFilipePT/shadcn-ui-theme-explorer/commits?author=joanamcs" title="Documentation">📖</a> <a href="#design-luisFilipePT" title="Design">🎨</a> <a href="#ideas-luisFilipePT" title="Ideas, Planning, & Feedback">🤔</a> <a href="#maintenance-luisFilipePT" title="Maintenance">🚧</a> <a href="https://github.com/luisFilipePT/shadcn-ui-theme-explorer/pulls?q=is%3Apr+reviewed-by%3Ajoanamcs" title="Reviewed Pull Requests">👀</a></td>
     </tr>
   </tbody>

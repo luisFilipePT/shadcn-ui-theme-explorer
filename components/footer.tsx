@@ -12,7 +12,7 @@ export default function Footer() {
       </p>
       <div className="flex justify-between">
         <div className="flex items-end">
-          <Link href="https://luis-oliveira.vercel.app/">
+          <Link href="https://www.luisfilipept.com/">
             <Image
               src={luisMemoji}
               alt="Luis avatar, just a memoji"
@@ -22,7 +22,7 @@ export default function Footer() {
             />
           </Link>
           <Link
-            href="https://luis-oliveira.vercel.app/"
+            href="https://www.luisfilipept.com/"
             className="hidden sm:inline"
           >
             <span className="text-sm font-medium text-muted-foreground underline underline-offset-4">
