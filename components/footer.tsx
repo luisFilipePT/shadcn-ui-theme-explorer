@@ -12,7 +12,7 @@ export default function Footer() {
       </p>
       <div className="flex justify-between">
         <div className="flex items-end">
-          <Link href="https://www.luisfilipept.com/">
+          <Link href="https://www.luisfilipept.com/" target="_blank">
             <Image
               src={luisMemoji}
               alt="Luis avatar, just a memoji"
@@ -23,6 +23,7 @@ export default function Footer() {
           </Link>
           <Link
             href="https://www.luisfilipept.com/"
+            target="_blank"
             className="hidden sm:inline"
           >
             <span className="text-sm font-medium text-muted-foreground underline underline-offset-4">
@@ -33,7 +34,11 @@ export default function Footer() {
         <div className="self-end pb-1">
           <div className="flex items-end text-sm">
             <Copyright height={17} width={17} />
-            <Link href="https://ui.shadcn.com/" className="hidden sm:inline">
+            <Link
+              href="https://ui.shadcn.com/"
+              target="_blank"
+              className="hidden sm:inline"
+            >
               &nbsp;
               <span className="text-sm font-medium text-muted-foreground underline underline-offset-4">
                 shadcn/ui
@@ -43,7 +48,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="flex items-end">
-          <Link href="https://joanasantos.vercel.app/">
+          <Link href="https://joanasantos.vercel.app/" target="_blank">
             <Image
               src={joanaMemoji}
               alt="Joana's avatar, just a memoji"
@@ -54,6 +59,7 @@ export default function Footer() {
           </Link>
           <Link
             href="https://joanasantos.vercel.app/"
+            target="_blank"
             className="hidden sm:inline"
           >
             <span className="text-sm font-medium text-muted-foreground underline underline-offset-4">

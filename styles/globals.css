@@ -2,6 +2,7 @@
 @import 'themes/gold.css';
 @import 'themes/nature.css';
 @import 'themes/netflix.css';
+@import 'themes/laracon.css';
 
 @tailwind base;
 @tailwind components;

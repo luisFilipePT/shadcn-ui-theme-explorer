@@ -2,23 +2,28 @@
 
 import { type ReactNode } from "react"
 import Link from "next/link"
+import { usePathname } from "next/navigation"
 import { ChevronLeft, ChevronRight } from "lucide-react"
 
-import { useTheme } from "@/components/shadcn-theme-provider"
 import { useSetTheme } from "@/hooks/use-set-theme"
-import { usePathname } from "next/navigation"
+import { useTheme } from "@/components/shadcn-theme-provider"
 
-export function ThemeArrows({ children, params }: { children: ReactNode, params: any }) {
-
+export function ThemeArrows({
+  children,
+  params,
+}: {
+  children: ReactNode
+  params: any
+}) {
   useSetTheme(params.theme)
   const { nextTheme, previousTheme } = useTheme()
   const pathname = usePathname()
 
-  const [, , ...nested] = pathname.split('/');
+  const [, , ...nested] = pathname.split("/")
 
-  const currentPage = nested ? `${nested.join('/')}` : ''
+  const currentPage = nested ? `${nested.join("/")}` : ""
 
-  return (    
+  return (
     <div>
       <Link href={`/${previousTheme}/${currentPage}`}>
         <ChevronLeft className="fixed left-0 top-1/2 h-10 w-10 cursor-pointer text-primary md:h-20 md:w-20" />

@@ -33,5 +33,12 @@
     "version": "1",
     "name": "Netflix",
     "description": "A bold color palette of black, white, and fiery red."
+  },
+  {
+    "author": "Luis Filipe",
+    "authorUsername": "luisFilipePT",
+    "version": "1",
+    "name": "Laracon",
+    "description": "A vibrant color palette celebrating Laracon US 2023."
   }
 ]

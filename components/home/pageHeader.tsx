@@ -25,7 +25,7 @@ export default function PageHeader({ theme }: { theme: string }) {
           {currentTheme.description}
         </p>
       </div>
-      <div className="mt-3 flex flex-col items-center justify-center rounded-lg border bg-card p-4 text-card-foreground shadow-sm sm:mt-0 sm:max-w-[50%] md:max-w-[33%]">
+      <div className="mt-3 flex flex-col items-center justify-center rounded-lg border bg-card p-4 text-card-foreground shadow-sm sm:mt-0 sm:max-w-[50%] md:max-w-[35%]">
         <div className="flex flex-col items-center text-base font-semibold">
           <div>
             Use the{" "}

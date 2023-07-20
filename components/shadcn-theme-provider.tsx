@@ -4,6 +4,7 @@ import * as React from "react"
 import { ReactNode, useEffect, useState } from "react"
 import { useRouter } from "next/navigation"
 import themes from "@/themes/index.json"
+
 import { sanitizeName } from "@/lib/utils"
 
 export type ShadcnTheme = {
@@ -66,11 +67,11 @@ export function ShadcnThemeProvider({ children }: ShadcnThemeProviderProps) {
     setPreviousThemeName(previousThemeName)
 
     const handleKeyDown = (event: KeyboardEvent) => {
-      const pathname = window.location.pathname
+      const pathname = window?.location?.pathname || "default"
 
-      const [, , ...nested] = pathname.split('/');
+      const [, , ...nested] = pathname.split("/")
 
-      const currentPage = nested ? `/${nested.join('/')}` : ''
+      const currentPage = nested ? `/${nested.join("/")}` : ""
 
       switch (event.key) {
         case "ArrowLeft":

@@ -23,6 +23,7 @@ export default function HomePage() {
         Inspired by{" "}
         <Link
           href="https://twitter.com/peduarte"
+          target="_blank"
           className="font-medium text-primary underline underline-offset-4"
         >
           @peduarte
@@ -30,6 +31,7 @@ export default function HomePage() {
         work on{" "}
         <Link
           href="https://themes.ray.so"
+          target="_blank"
           className="font-medium text-primary underline underline-offset-4"
         >
           Raycast Theme Explorer
@@ -37,6 +39,7 @@ export default function HomePage() {
         , a collection of themes designed to complement{" "}
         <Link
           href="https://ui.shadcn.com/"
+          target="_blank"
           className="font-medium text-primary underline underline-offset-4"
         >
           shadcn/ui
@@ -50,6 +53,7 @@ export default function HomePage() {
         If you enjoy using this tool, please consider
         <Link
           href="https://github.com/luisFilipePT/shadcn-ui-theme-explorer"
+          target="_blank"
           className="px-2"
         >
           <Star
