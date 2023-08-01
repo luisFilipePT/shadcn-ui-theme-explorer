@@ -1,0 +1,27 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "commitType": "docs",
+  "commitConvention": "angular",
+  "contributors": [
+    {
+      "login": "Tk-brainCodes",
+      "name": "ThankGod Eboreime",
+      "avatar_url": "https://avatars.githubusercontent.com/u/54640421?v=4",
+      "profile": "https://tkwordclass.vercel.app/",
+      "contributions": [
+        "code",
+        "maintenance"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "skipCi": true,
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "projectName": "shadcn-ui-theme-explorer",
+  "projectOwner": "luisFilipePT"
+}
