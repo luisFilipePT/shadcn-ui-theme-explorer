@@ -5,6 +5,7 @@
   "author": "Luis Oliveira",
   "description": "A theme explorer for shadcn UI",
   "scripts": {
+    "prepare": "husky install",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
@@ -59,6 +60,8 @@
     "zod": "^3.21.4"
   },
   "devDependencies": {
+    "@commitlint/cli": "^17.7.1",
+    "@commitlint/config-conventional": "^17.7.0",
     "@ianvs/prettier-plugin-sort-imports": "^4.0.2",
     "@types/node": "^17.0.45",
     "@types/react": "^18.2.14",
@@ -70,6 +73,8 @@
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-tailwindcss": "^3.13.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^14.0.1",
     "postcss": "^8.4.24",
     "prettier": "^2.8.8",
     "tailwindcss": "^3.3.3",
@@ -80,5 +85,14 @@
     "node": ">=18.x.x",
     "yarn": "please-use-npm",
     "npm": ">=8.x.x"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "prettier --write",
+      "eslint --ignore-path .gitignore --fix"
+    ],
+    "*.{md,json,html,css}": [
+      "prettier --write"
+    ]
   }
 }
