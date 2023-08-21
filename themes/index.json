@@ -40,5 +40,12 @@
     "version": "1",
     "name": "Laracon",
     "description": "A vibrant color palette celebrating Laracon US 2023."
+  },
+  {
+    "author": "Daniel Sousa",
+    "authorUsername": "tutods",
+    "version": "1",
+    "name": "Dracula",
+    "description": "A dark theme for Atom, Alfred, Emacs, Highlight.js, Hyper, iTerm, JetBrains, Pygments, Slack, Sublime Text, TextMate, Terminal.app, Vim, Xcode, Zsh, and many more. Light version adapted from original colors."
   }
 ]
