@@ -16,6 +16,16 @@
         "code",
         "maintenance"
       ]
+    },
+    {
+      "login": "tutods",
+      "name": "Daniel Sousa",
+      "avatar_url": "https://avatars.githubusercontent.com/u/18479474?v=4",
+      "profile": "https://github.com/tutods",
+      "contributions": [
+        "code",
+        "design"
+      ]
     }
   ],
   "contributorsPerLine": 7,

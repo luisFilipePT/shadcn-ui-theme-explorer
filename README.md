@@ -1,6 +1,6 @@
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 [![shadcn/ui Theme Explorer released under the MIT license.](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE)
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
@@ -133,6 +133,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   <tbody>
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="https://tkwordclass.vercel.app/"><img src="https://avatars.githubusercontent.com/u/54640421?v=4?s=100" width="100px;" alt="ThankGod Eboreime"/><br /><sub><b>ThankGod Eboreime</b></sub></a><br /><a href="https://github.com/luisFilipePT/shadcn-ui-theme-explorer/commits?author=Tk-brainCodes" title="Code">💻</a> <a href="#maintenance-Tk-brainCodes" title="Maintenance">🚧</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/tutods"><img src="https://avatars.githubusercontent.com/u/18479474?v=4?s=100" width="100px;" alt="Daniel Sousa"/><br /><sub><b>Daniel Sousa</b></sub></a><br /><a href="https://github.com/luisFilipePT/shadcn-ui-theme-explorer/commits?author=tutods" title="Code">💻</a> <a href="#design-tutods" title="Design">🎨</a></td>
     </tr>
   </tbody>
 </table>
