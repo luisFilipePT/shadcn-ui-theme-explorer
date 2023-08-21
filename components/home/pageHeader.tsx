@@ -1,16 +1,15 @@
 import themes from "@/themes/index.json"
-import {ChevronLeft, ChevronRight} from "lucide-react"
+import { ChevronLeft, ChevronRight } from "lucide-react"
 
-import {sanitizeName} from "@/lib/utils"
+import { sanitizeName } from "@/lib/utils"
 
-export default function PageHeader({theme}: { theme: string }) {
+export default function PageHeader({ theme }: { theme: string }) {
   const currentTheme =
     themes.find((t) => sanitizeName(t.name) === sanitizeName(theme)) ??
     themes[0]
 
   return (
-    <section
-      className="flex min-h-[120px] w-full flex-col items-center justify-between pb-2 pt-6 sm:flex-row md:min-h-[100px] md:py-5 md:pb-8">
+    <section className="flex min-h-[120px] w-full flex-col items-center justify-between pb-2 pt-6 sm:flex-row md:min-h-[100px] md:py-5 md:pb-8">
       <div className="flex max-w-[980px] flex-col items-start gap-2">
         <h1 className="text-2xl font-extrabold leading-tight tracking-tighter md:text-4xl">
           {currentTheme.name}
@@ -19,16 +18,21 @@ export default function PageHeader({theme}: { theme: string }) {
               "pl-2 text-base font-light leading-normal tracking-wide md:text-xl"
             }
           >
-            by <a className={'underline underline-offset-4'} href={`https://github.com/${currentTheme.authorUsername}`}
-                  target="_blank">{currentTheme.author}</a>
+            by{" "}
+            <a
+              className={"underline underline-offset-4"}
+              href={`https://github.com/${currentTheme.authorUsername}`}
+              target="_blank"
+            >
+              {currentTheme.author}
+            </a>
           </span>
         </h1>
         <p className="max-w-[700px] text-base text-muted-foreground md:text-lg">
           {currentTheme.description}
         </p>
       </div>
-      <div
-        className="mt-3 flex flex-col items-center justify-center rounded-lg border bg-card p-4 text-card-foreground shadow-sm sm:mt-0 sm:max-w-[50%] md:max-w-[35%]">
+      <div className="mt-3 flex flex-col items-center justify-center rounded-lg border bg-card p-4 text-card-foreground shadow-sm sm:mt-0 sm:max-w-[50%] md:max-w-[35%]">
         <div className="flex flex-col items-center text-base font-semibold">
           <div>
             Use the{" "}
@@ -40,11 +44,11 @@ export default function PageHeader({theme}: { theme: string }) {
             </code>{" "}
             keys or click the{" "}
             <span className="mb-[-6px] inline-block">
-              <ChevronLeft className="h-6 w-6 text-primary"/>
+              <ChevronLeft className="h-6 w-6 text-primary" />
             </span>{" "}
             and{" "}
             <span className="mb-[-6px] inline-block">
-              <ChevronRight className="h-6 w-6 text-primary"/>
+              <ChevronRight className="h-6 w-6 text-primary" />
             </span>{" "}
             arrows below to navigate between themes
           </div>
