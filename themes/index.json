@@ -40,5 +40,12 @@
     "version": "1",
     "name": "Laracon",
     "description": "A vibrant color palette celebrating Laracon US 2023."
+  },
+  {
+    "author": "Daniel Sousa",
+    "authorUsername": "tutods",
+    "version": "1",
+    "name": "Dracula",
+    "description": "A dark theme using Dracula colors, a popular theme on IDEs and more. Light theme adapted from original colors."
   }
 ]
