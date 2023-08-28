@@ -18,7 +18,14 @@ export default function PageHeader({ theme }: { theme: string }) {
               "pl-2 text-base font-light leading-normal tracking-wide md:text-xl"
             }
           >
-            by {currentTheme.author}
+            by{" "}
+            <a
+              className={"underline underline-offset-4"}
+              href={`https://github.com/${currentTheme.authorUsername}`}
+              target="_blank"
+            >
+              {currentTheme.author}
+            </a>
           </span>
         </h1>
         <p className="max-w-[700px] text-base text-muted-foreground md:text-lg">
