@@ -3,8 +3,9 @@
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 
-import { cn } from "@/lib/utils"
+import { cn, sanitizeName } from "@/lib/utils"
 import { buttonVariants } from "@/components/ui/button"
+import { useTheme } from "@/components/shadcn-theme-provider"
 
 interface SidebarNavProps extends React.HTMLAttributes<HTMLElement> {
   items: {
@@ -15,6 +16,9 @@ interface SidebarNavProps extends React.HTMLAttributes<HTMLElement> {
 
 export function SidebarNav({ className, items, ...props }: SidebarNavProps) {
   const pathname = usePathname()
+
+  const { currentTheme } = useTheme()
+  const themePath = sanitizeName(currentTheme.name)
 
   return (
     <nav
@@ -27,10 +31,10 @@ export function SidebarNav({ className, items, ...props }: SidebarNavProps) {
       {items.map((item) => (
         <Link
           key={item.href}
-          href={item.href}
+          href={`/${themePath}${item.href}`}
           className={cn(
             buttonVariants({ variant: "ghost" }),
-            pathname === item.href
+            pathname === `/${themePath}${item.href}`
               ? "bg-muted hover:bg-muted"
               : "hover:bg-transparent hover:underline",
             "justify-start"
